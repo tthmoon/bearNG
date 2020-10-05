@@ -1,10 +1,29 @@
 package bear;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import groovyjarjarantlr4.v4.runtime.misc.MultiMap;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class BearPOJO {
 
     private String bear_name;
     private double bear_age;
     private String bear_type;
+    private Map<String, String> properties = new HashMap<>();
+
+    @JsonAnyGetter
+    public Map<String, String> getMap() {
+        return properties;
+    }
+
+    @JsonAnySetter
+    public void setMap(String name, String value) {
+        properties.put(name, value);
+    }
 
     public BearPOJO(String bear_type, String bear_name, double bear_age) {
         this.bear_name = bear_name;
