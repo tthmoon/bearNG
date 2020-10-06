@@ -8,6 +8,8 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 import settings.Server;
 
+//Класс для подготовки спецификации для Rest assured.
+//Используется для конфигурирования фреймворка, как следствие его нужно наследовать в каждом тесте, где используется данный фреймворк.
 public class SetupRA {
     @BeforeMethod
     public void configureRestAssured() {

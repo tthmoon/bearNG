@@ -1,5 +1,5 @@
 package bear;
-
+//Псевдо-перечисление, для удобства писателя тестов
 public final class BearTypes {
     public static final String POLAR = "POLAR";
     public static final String BROWN = "BROWN";

@@ -8,6 +8,7 @@ import groovyjarjarantlr4.v4.runtime.misc.MultiMap;
 import java.util.HashMap;
 import java.util.Map;
 
+//POJO класс для создания тела медведя. Принимает дополнительные поля для тестирования
 public class BearPOJO {
 
     private String bear_name;
